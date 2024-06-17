@@ -12,5 +12,5 @@ The page uses Bootstrap for styling and has custom CSS for visual enhancements l
 
 https://www.youtube.com/watch?v=Kwb0b9QtQwM
 
-![Front_Carousel](https://github.com/your-username/your-repo-name/raw/main/An%20Online%20Website%20For%20A%20Retailer%20of%20Clothing/image/image.png)
+![Front_Carousel](https://github.com/devindu22/BreadcrumbsRedTopClothingStore/raw/main/An%20Online%20Website%20For%20A%20Retailer%20of%20Clothing/image/image.png)
 
