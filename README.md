@@ -12,4 +12,4 @@ The page uses Bootstrap for styling and has custom CSS for visual enhancements l
 
 https://www.youtube.com/watch?v=Kwb0b9QtQwM
 
-![Front_Carousel](image/image.png)
+![Front_Carousel](An Online Website For A Retailer of Clothing/image/image.png)
