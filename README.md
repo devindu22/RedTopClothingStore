@@ -11,3 +11,5 @@
 The page uses Bootstrap for styling and has custom CSS for visual enhancements like animations and hover effects.
 
 https://www.youtube.com/watch?v=Kwb0b9QtQwM
+
+![Front_Carousel](image.png)
