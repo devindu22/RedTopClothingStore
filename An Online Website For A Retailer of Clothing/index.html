@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedTopClothingStore.</title>
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-pzjw8f+ua7Kw1TIq8yd6QDH3cFQxP6t04j8hKepbd4zsftwhj0Bz2AE0f6DgnH/c" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <meta name="theme-color" content="#7952b3">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background-image: var(--bs-gradient);
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .menu-item {
+            margin-right: 20px;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #666;
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: 1px solid #df0e0e;
+        }
+
+        .search-button {
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-icons .search-form {
+            margin-right: 20px;
+        }
+
+        .navbar-icons .user-dropdown,
+        .navbar-icons .navbar-icon {
+            margin-right: 10px;
+        }
+
+        .cart-icon::after {
+            content: attr(data-cart-items);
+            position: absolute;
+            top: 15px;
+            right: 320px;
+            /*chrome=320px// edge=300px*/
+            /*remember to change it if there's a difference in edge or chrome*/
+            height: 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border-radius: 100%;
+            padding: 3px 6px;
+            font-size: 0.7rem;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+            /* Change cursor to pointer to indicate it's clickable */
+        }
+
+        .user-button,
+        .navbar-icon {
+            cursor: pointer;
+            /* Change cursor to pointer to indicate they are clickable */
+        }
+
+        /* Style the buttons */
+        .user-button,
+        .navbar-icon {
+            display: inline-block;
+            padding: 5px 10px;
+            /* Your desired background color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            /* Adjust margin as needed */
+        }
+
+        .user-button img,
+        .navbar-icon img {
+            vertical-align: middle;
+            /* Align the image vertically */
+        }
+
+
+        .card {
+            position: relative;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.25);
+            z-index: 2;
+            background-color: rgba(0, 210, 255, 1);
+
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer-payment {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .text-gray-300 {
+            color: #d1d1d1 !important;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .footer-container {
+            position: relative;
+
+        }
+
+        .image-container {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.5);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h5 {
+            font-size: 4em;
+            /* Adjust the font size as needed */
+            margin-bottom: 20px;
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .shop-now-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 150px;
+        }
+
+        #confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 9999;
+            /* Ensure it is above other elements */
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: confetti-fall linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .mt-7 {
+            margin-top: 3rem;
+            /* Adjust as needed */
+        }
+
+        .discover-more-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #007bff;
+            border: 2px solid transparent;
+            border-radius: 50px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discover-more-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: all 0.75s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+
+        .discover-more-link:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .discover-more-link:hover {
+            color: #ffffff;
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* General Styling */
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-10 {
+            margin-bottom: 3rem;
+        }
+
+        /* Heading Styling */
+        h2.text-center {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2.text-center::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: #007bff;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Nav Links Styling */
+        .top-sellers-nav .nav-link {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #007bff;
+            background-color: #f8f9fa;
+            border: 2px solid #007bff;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .top-sellers-nav .nav-link.active {
+            color: #ffffff;
+            background-color: #007bff;
+        }
+
+        .top-sellers-nav .nav-link:hover {
+            color: #ffffff;
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Animation for Nav Links */
+        .top-sellers-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(0, 210, 255, 1);
+            transition: all 0.75s ease;
+            border-radius: 0%;
+            transform: translate(-50%, -50%) scale(0.5);
+            z-index: -1;
+        }
+
+        .top-sellers-nav .nav-link:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* General Styling */
+        .row {
+            margin: 0;
+            padding: 0;
+        }
+
+        .col-12 {
+            padding: 0;
+        }
+
+        /* Banner Styling */
+        .holiday-banner {
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #1bac1b, #32cd32);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holiday-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: rotateBG 10s linear infinite;
+            transform-origin: center;
+            z-index: 0;
+        }
+
+        @keyframes rotateBG {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Text Styling */
+        .holiday-deals-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            z-index: 1;
+            position: relative;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* General Styling */
+        .py-3 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Banner Styling */
+        .store-banner {
+            background: linear-gradient(135deg, #c2382e, #ff6f61);
+            border-radius: 10px;
+            position: relative;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .store-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: rotateBG 15s linear infinite;
+            transform-origin: center;
+            z-index: 0;
+        }
+
+        @keyframes rotateBG {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Text Styling */
+        .store-banner-text {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            z-index: 1;
+            position: relative;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .store-banner-text img {
+            height: 90px;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .sexy-section {
+            background-color: #f9f9f9;
+            /* Background color */
+            border-radius: 15px;
+            /* Rounded corners */
+            padding: 40px 20px;
+            /* Padding */
+        }
+
+        .sexy-item {
+            background-color: #ffffff;
+            /* Item background color */
+            border-radius: 50px;
+            /* Item rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 1);
+            /* Shadow effect */
+            padding: 30px;
+            /* Padding */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            margin-right: 22px;
+        }
+
+        .sexy-item:hover {
+            transform: translateY(-10px);
+            /* Hover effect */
+        }
+
+        .sexy-item img {
+            transition: transform 0.3s ease;
+            /* Smooth icon transition */
+        }
+
+        .sexy-item:hover img {
+            transform: scale(1.1);
+            /* Icon scale on hover */
+        }
+
+        .banner-carousel {
+            width: 100%;
+            height: 100px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-content {
+            width: 100%;
+            height: 100px;
+            font-size: larger;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            /* Hide overflowing content */
+        }
+
+        .banner-content .carousel-item {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: wheel 15s infinite;
+        }
+
+        .banner-content .carousel-item:nth-child(2) {
+            animation-delay: 10s;
+            /* Delay animation of the second item */
+        }
+
+        @keyframes wheel {
+
+            0%,
+            20% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            30%,
+            50% {
+                transform: translateY(100%);
+                opacity: 1;
+            }
+
+            70%,
+            90% {
+                transform: translateY(100%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .in-stock-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #1bac1b;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font: 1em sans-serif;
+            border-radius: 3px;
+            z-index: 1;
+        }
+
+        .not-in-stock-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font: 1em sans-serif;
+            border-radius: 3px;
+            z-index: 1;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            padding: 15px 0;
+            background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(0, 210, 255, 1) 100%);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+
+        .navigation a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgb(0, 0, 0);
+        }
+
+        .navigation i {
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+
+        .items-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .item {
+            min-width: 150px;
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .img-container img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: #ff6347;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .label.new {
+            background-color: #ff6347;
+        }
+
+        .label.promo {
+            background-color: #32cd32;
+        }
+
+        .item p {
+            margin: 5px 0;
+        }
+
+        /* Animation for image zoom on hover */
+        .img-container img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            /* Smoother transition */
+        }
+
+        .img-container:hover img {
+            transform: scale(1.05);
+            /* Slightly increased scale */
+        }
+
+        /* Smooth transition for item cards */
+        .item {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bannerCarousel" class="banner-carousel">
+        <div class="banner-content">
+            <div class="carousel-item active">
+                <p><img src="gift-box.png" alt="Gift Box" height="20"> Father's Day Special Discounts! Use code
+                    <u>'DAD'</u> to claim. <img src="gift-box.png" alt="Gift Box" height="20">
+                </p>
+            </div>
+            <div class="carousel-item active">
+                <p><img src="map.png" alt="Map" height="20"> Find our store locations and Search nearby stores.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-logo">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="brand-name">RedTopClothingStore.</span>
+            </a>
+            <ul class="navbar-menu">
+                <li class="menu-item"><a href="#" class="menu-link">Sale</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Catalog</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Pages</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Q&A</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <form action="#" class="search-form">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <button type="submit" class="search-button"><img src="glass.png" alt="Search" class="logo"></button>
+                </form>
+                <span class="user-button" id="userButton"><img src="user.png" alt="User" class="logo"></span>
+                <span class="navbar-icon" id="wishlistButton"><img src="heart.png" alt="Wishlist" class="logo"></span>
+                <span class="navbar-icon" id="locationButton"><img src="gps.png" alt="Location" class="logo"></span>
+                <span class="navbar-icon cart-icon" data-cart-items="2" id="cartButton"><img src="add-to-cart.png"
+                        alt="Cart" class="logo"></span>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image1.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img src="image2.jpg" class="d-block w-100" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img src="image3.jpg" class="d-block w-100" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img src="image4.jpg" class="d-block w-100" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img src="image5.jpg" class="d-block w-100" alt="Fifth slide">
+            </div>
+        </div>
+    </div>
+
+    <section class="pt-7 sexy-section">
+        <div class="container">
+            <div class="row pb-7">
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <!-- Item -->
+                    <div class="d-flex flex-column align-items-center justify-content-center mb-6 mb-lg-0 sexy-item">
+
+                        <!-- Icon -->
+                        <img src="free-shipping.png" alt="Free Shipping Icon" height="60">
+
+                        <!-- Heading -->
+                        <h6 class="mt-3 heading-xxs mb-1 text-center">
+                            Free Shipping
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm text-muted text-center">
+                            On orders over $100
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center mb-6 mb-lg-0 sexy-item">
+
+                        <!-- Icon -->
+                        <img src="return.png" alt="Free Returns Icon" height="60">
+
+                        <!-- Heading -->
+                        <h6 class="mt-3 heading-xxs mb-1 text-center">
+                            Free Returns
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm text-muted text-center">
+                            Return money within 30 days
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center mb-6 mb-lg-0 sexy-item">
+
+                        <!-- Icon -->
+                        <img src="shield.png" alt="Secure Shopping Icon" height="60">
+
+                        <!-- Heading -->
+                        <h6 class="mt-3 heading-xxs mb-1 text-center">
+                            Secure Shopping
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm text-muted text-center">
+                            You're in safe hands
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center sexy-item">
+
+                        <!-- Icon -->
+                        <img src="price-tag.png" alt="Styles Icon" height="60">
+
+                        <!-- Heading -->
+                        <h6 class="mt-3 heading-xxs mb-1 text-center">
+                            Over 10,000 Styles
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm text-muted text-center">
+                            We have everything you need
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <div class="py-3 bg-pattern mb-4">
+        <div class="container store-banner">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Text -->
+                    <div class="text-center text-white store-banner-text">
+                        <span class="heading-xxs letter-spacing-xl">
+                            <img src="logo.png" alt="Logo" height="90">&nbsp;RedTopClothingStore.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <h2 class="mb-4 text-center">Explore</h2>
+            <div class="col-md-4">
+                <div class="image-container">
+                    <img src="cover-1.jpg" alt="Women">
+                    <div class="overlay">
+                        <h5>Women</h5>
+                        <button class="shop-now-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container">
+                    <img src="cover-2.jpg" alt="Men">
+                    <div class="overlay">
+                        <h5>Men</h5>
+                        <button class="shop-now-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container">
+                    <img src="cover-3.jpg" alt="Kids">
+                    <div class="overlay">
+                        <h5>Kids</h5>
+                        <button class="shop-now-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="py-5 bg-pattern mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Text -->
+                    <div class="text-center holiday-banner">
+                        <span class="holiday-deals-text">
+                            ⚡️ Happy Holiday Deals on Everything ⚡️
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="confetti-container"></div>
+    </div>
+
+
+
+    <section class="py-12">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <h2 class="mb-4 text-center">Top Month Sellers</h2>
+                    <div class="nav justify-content-center mb-10 top-sellers-nav">
+                        <a class="nav-link active" href="#topSellersTab" data-bs-toggle="tab">Women</a>
+                        <a class="nav-link" href="#topSellersTab" data-bs-toggle="tab">Men</a>
+                        <a class="nav-link" href="#topSellersTab" data-bs-toggle="tab">Kids</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="tab-content">
+                <div class="tab-pane fade active show" id="topSellersTab">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+
+                                    <!-- Image -->
+                                    <a class="card-img-hover">
+                                        <img class="card-img-top card-img-back" src="product-120.jpg" alt="...">
+                                    </a>
+
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Shoes</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Leather mid-heel Sandals
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $129.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+                                    <!-- Label -->
+                                    <div class="in-stock-label">In Stock</div>
+
+
+                                    <!-- Image -->
+                                    <a class="card-img-hover">
+                                        <img class="card-img-top card-img-back" src="product-121.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Dresses</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Cotton floral print Dress
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $40.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+
+                                    <!-- Image -->
+                                    <a class="card-img-hover">
+                                        <img class="card-img-top card-img-back" src="product-122.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Shoes</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Leather Sneakers
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold">
+                                        <span class="fs-xs text-gray-350 text-decoration-line-through">$85.00</span>
+                                        <span class="text-primary">$45.00</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+                                    <!-- Label -->
+                                    <div class="in-stock-label">In Stock</div>
+
+                                    <!-- Image -->
+                                    <a href="#!">
+                                        <img class="card-img-top card-img-front" src="product-8.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Tops</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Cropped cotton Top
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $29.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+                                    <!-- Label -->
+                                    <div class="not-in-stock-label">Unavailable</div>
+
+                                    <!-- Image -->
+                                    <a href="#!">
+                                        <img class="card-img-top card-img-front" src="product-9.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Dresses</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Floral print midi Dress
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $50.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+
+                                    <!-- Image -->
+                                    <a class="card-img-hover">
+                                        <img class="card-img-top card-img-back" src="product-123.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Bags</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Suede cross body Bag
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold">
+                                        <span class="fs-xs text-gray-350 text-decoration-line-through">$79.00</span>
+                                        <span class="text-primary">$49.00</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+                                    <!-- Label -->
+                                    <div class="in-stock-label">In Stock</div>
+
+                                    <!-- Image -->
+                                    <a class="card-img-hover">
+                                        <img class="card-img-top card-img-front" src="product-11.jpg" alt="...">
+                                    </a>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Skirts</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Printed A-line Skirt
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $79.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <!-- Card -->
+                            <div class="card mb-7">
+
+                                <!-- Image -->
+                                <div class="card-img">
+
+                                    <!-- Image -->
+                                    <a href="#!">
+                                        <img class="card-img-top card-img-front" src="product-12.jpg" alt="...">
+                                    </a>
+
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body px-0">
+
+                                    <!-- Category -->
+                                    <div class="fs-xs">
+                                        <a class="text-muted">Shoes</a>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="fw-bold">
+                                        <a class="text-body">
+                                            Heel strappy Sandals
+                                        </a>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="fw-bold text-muted">
+                                        $90.00
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Link -->
+                    <div class="mt-7 text-center">
+                        <a class="discover-more-link" href="#!">
+                            Discover more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- Navigation -->
+    <div class="navigation">
+        <a href="#new-arrivals" onclick="showSection('new-arrivals')"><i class="fas fa-star"></i> New Arrivals</a>
+        <a href="#promotions" onclick="showSection('promotions')"><i class="fas fa-tags"></i> Promotions</a>
+    </div>
+
+    <!-- Items Sections -->
+    <div id="new-arrivals" class="items-section" style="display: none;">
+        <div class="items-container">
+            <div class="item">
+                <div class="img-container">
+                    <img src="Summer Dress.jpeg" alt="Summer Dress">
+                    <span class="label new">New</span>
+                </div>
+                <p><strong>Clothing:</strong> Summer Dress</p>
+                <p><strong>Price:</strong> $49.99</p>
+            </div>
+            <div class="item">
+                <div class="img-container">
+                    <img src="Running Shoes.jpeg" alt="Running Shoes">
+                    <span class="label new">New</span>
+                </div>
+                <p><strong>Shoes:</strong> Running Shoes</p>
+                <p><strong>Price:</strong> $89.99</p>
+            </div>
+            <div class="item">
+                <div class="img-container">
+                    <img src="Leather Handbag.jpeg" alt="Leather Handbag">
+                    <span class="label new">New</span>
+                </div>
+                <p><strong>Bags:</strong> Leather Handbag</p>
+                <p><strong>Price:</strong> $129.99</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="promotions" class="items-section" style="display: none;">
+        <div class="items-container">
+            <div class="item">
+                <div class="img-container">
+                    <img src="Winter Jacket.jpeg" alt="Winter Jacket">
+                    <span class="label promo">25% Off</span>
+                </div>
+                <p><strong>Clothing:</strong> Winter Jacket</p>
+                <p><strong>Original Price:</strong> $199.99</p>
+                <p><strong>Promotional Price:</strong> $149.99</p>
+            </div>
+            <div class="item">
+                <div class="img-container">
+                    <img src="Casual Sneakers.jpeg" alt="Casual Sneakers">
+                    <span class="label promo">30% Off</span>
+                </div>
+                <p><strong>Shoes:</strong> Casual Sneakers</p>
+                <p><strong>Original Price:</strong> $69.99</p>
+                <p><strong>Promotional Price:</strong> $49.99</p>
+            </div>
+            <div class="item">
+                <div class="img-container">
+                    <img src="Backpack.jpeg" alt="Backpack">
+                    <span class="label promo">25% Off</span>
+                </div>
+                <p><strong>Bags:</strong> Backpack</p>
+                <p><strong>Original Price:</strong> $79.99</p>
+                <p><strong>Promotional Price:</strong> $59.99</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark bg-cover">
+        <br>
+        <br>
+        <br>
+        <div class="py-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+
+                        <!-- Heading -->
+
+                        <h4 class="mb-6 text-white"><img src="logo.png" alt="Logo"
+                                height="50">&nbsp;RedTopClothingStore.</h4>
+
+                    </div>
+                    <div class="col-6 col-sm">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxs mb-4 text-white">
+                            Support
+                        </h6>
+
+                        <!-- Links -->
+                        <ul class="list-unstyled mb-7 mb-sm-0">
+                            <li>
+                                <a class="text-gray-300" href="https://github.com/devindu22">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">FAQs</a>
+                            </li>
+                            <li>
+                                <a class=" text-gray-300" href="#!">Size Guide</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Shipping & Returns</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class=" col-6 col-sm">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxs mb-4 text-white">
+                            Shop
+                        </h6>
+
+                        <!-- Links -->
+                        <ul class="list-unstyled mb-7 mb-sm-0">
+                            <li>
+                                <a class="text-gray-300" href="#!">Men's Shopping</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Women's Shopping</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Kids' Shopping</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Discounts</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6 col-sm">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxs mb-4 text-white">
+                            Company
+                        </h6>
+
+                        <!-- Links -->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-gray-300" href="#!">Our Story</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Careers</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">Privacy & Cookie policy</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6 col-sm">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxs mb-4 text-white">
+                            Contact
+                        </h6>
+
+                        <!-- Links -->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-gray-300" href="#!">+94-11-23-45-678</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">+94-11-23-45-679</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-300" href="#!">help@RedTopClothingStore.com</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <!-- Copyright -->
+                        <p class="mb-3 mb-md-0 fs-xxs text-muted" style="color: #ffffff !important;">
+                            © 2024 All rights reserved. Designed by Devindu Malshan.
+                        </p>
+
+                    </div>
+                    <div class="col-auto">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- Payment methods -->
+                        <img class="footer-payment" src="mastercard.svg" alt="...">
+                        <img class="footer-payment" src="visa.svg" alt="...">
+                        <img class="footer-payment" src="amex.svg" alt="...">
+                        <img class="footer-payment" src="paypal.svg" alt="...">
+                        <img class="footer-payment" src="maestro.svg" alt="...">
+                        <img class="footer-payment" src="klarna.svg" alt="...">
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const confettiContainer = document.getElementById('confetti-container');
+
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = getRandomColor();
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.opacity = Math.random();
+                confettiContainer.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000); // Remove confetti after 5 seconds
+            }
+
+            function getRandomColor() {
+                const colors = ['#ff0', '#f00', '#0f0', '#00f', '#0ff', '#f0f', '#ff8000'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            setInterval(createConfetti, 100); // Create a new confetti every 100ms
+        });
+    </script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.items-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+            // Scroll to the selected section
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
