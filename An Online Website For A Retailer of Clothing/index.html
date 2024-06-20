@@ -109,26 +109,6 @@
             margin-right: 10px;
         }
 
-        .cart-icon::after {
-            content: attr(data-cart-items);
-            position: absolute;
-            top: 15px;
-            right: 320px;
-            /*chrome=320px// edge=300px*/
-            /*remember to change it if there's a difference in edge or chrome*/
-            height: 20px;
-            background-color: #dc3545;
-            color: #fff;
-            border-radius: 100%;
-            padding: 3px 6px;
-            font-size: 0.7rem;
-        }
-
-        .cart-icon {
-            cursor: pointer;
-            /* Change cursor to pointer to indicate it's clickable */
-        }
-
         .user-button,
         .navbar-icon {
             cursor: pointer;
@@ -662,7 +642,7 @@
             background-color: #1bac1b;
             color: white;
             padding: 5px 10px;
-            font-size: 12px;
+            font-size: 10px;
             font: 1em sans-serif;
             border-radius: 3px;
             z-index: 1;
@@ -675,7 +655,7 @@
             background-color: red;
             color: white;
             padding: 5px 10px;
-            font-size: 12px;
+            font-size: 10px;
             font: 1em sans-serif;
             border-radius: 3px;
             z-index: 1;
@@ -813,7 +793,7 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="navbar-logo">
+            <a href="index.html" class="navbar-logo">
                 <img src="logo.png" alt="Logo" class="logo">
                 <span class="brand-name">RedTopClothingStore.</span>
             </a>
@@ -828,11 +808,24 @@
                     <input type="text" class="search-input" placeholder="Search">
                     <button type="submit" class="search-button"><img src="glass.png" alt="Search" class="logo"></button>
                 </form>
-                <span class="user-button" id="userButton"><img src="user.png" alt="User" class="logo"></span>
-                <span class="navbar-icon" id="wishlistButton"><img src="heart.png" alt="Wishlist" class="logo"></span>
-                <span class="navbar-icon" id="locationButton"><img src="gps.png" alt="Location" class="logo"></span>
-                <span class="navbar-icon cart-icon" data-cart-items="2" id="cartButton"><img src="add-to-cart.png"
-                        alt="Cart" class="logo"></span>
+                <form action="signin.html" class="form-inline my-2 my-lg-0">
+                    <a href="signin.html" class="navbar-icon" id="signintButton">
+                        <img src="user.png" alt="User" class="logo">
+                    </a>
+                </form>
+                <form action="Wishlist.html" class="form-inline my-2 my-lg-0">
+                    <a href="Wishlist.html" class="navbar-icon" id="wishlistButton">
+                        <img src="heart.png" alt="Wishlist" class="logo">
+                    </a>
+                </form>
+                <span class="navbar-icon" id="locationButton">
+                    <img src="gps.png" alt="Location" class="logo">
+                </span>
+                <form action="checkout.html" class="form-inline my-2 my-lg-0">
+                    <a href="checkout.html" class="navbar-icon cart-icon" id="cartButton">
+                        <img src="add-to-cart.png" alt="Cart" class="logo">
+                    </a>
+                </form>
 
             </div>
         </div>
@@ -1052,7 +1045,8 @@
                                 <div class="card-img">
 
                                     <!-- Image -->
-                                    <a class="card-img-hover">
+                                    <a class="card-img-hover"
+                                        href="C:\Users\Devindu Malshan\Desktop\L3DIIT\Assignment\Unit 05\00216050\An Online Website For A Retailer of Clothing\Shoes.html">
                                         <img class="card-img-top card-img-back" src="product-120.jpg" alt="...">
                                     </a>
 
@@ -1074,8 +1068,9 @@
                                     </div>
 
                                     <!-- Price -->
-                                    <div class="fw-bold text-muted">
-                                        $129.00
+                                    <div class="fw-bold">
+                                        <span class="fs-xs text-gray-350 text-decoration-line-through">$100.00</span>
+                                        <span class="text-primary">$75.00</span>
                                     </div>
 
                                 </div>
@@ -1095,7 +1090,8 @@
 
 
                                     <!-- Image -->
-                                    <a class="card-img-hover">
+                                    <a class="card-img-hover"
+                                        href="C:\Users\Devindu Malshan\Desktop\L3DIIT\Assignment\Unit 05\00216050\An Online Website For A Retailer of Clothing\Dresses.html">
                                         <img class="card-img-top card-img-back" src="product-121.jpg" alt="...">
                                     </a>
                                 </div>
@@ -1214,7 +1210,7 @@
                                 <!-- Image -->
                                 <div class="card-img">
                                     <!-- Label -->
-                                    <div class="not-in-stock-label">Unavailable</div>
+                                    <div class="not-in-stock-label">Out of Stock</div>
 
                                     <!-- Image -->
                                     <a href="#!">
@@ -1649,6 +1645,21 @@
             // Scroll to the selected section
             document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
         }
+    </script>
+    <!-- JavaScript to handle opening map location -->
+    <script>
+        // Function to open map location with a specific address
+        function openMapLocation() {
+            // Replace 'address' with the specific place address
+            var address = encodeURIComponent('3 De Fonseka Pl, Colombo 00400');
+            // Construct the Google Maps URL
+            var mapUrl = 'https://maps.google.com/maps?q=' + address + '&hl=en';
+            // Open the URL in a new window/tab
+            window.open(mapUrl, '_blank');
+        }
+
+        // Add event listener to the locationButton
+        document.getElementById('locationButton').addEventListener('click', openMapLocation);
     </script>
 
 </body>
