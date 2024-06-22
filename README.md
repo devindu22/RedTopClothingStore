@@ -12,7 +12,12 @@ The page uses Bootstrap for styling and has custom CSS for visual enhancements l
 
 https://www.youtube.com/watch?v=Kwb0b9QtQwM
 
+![front](https://github.com/devindu22/RedTopClothingStore/assets/114844896/86b0a758-9c41-4d97-a5a5-a24535aff036)
+
 ## A user-friendly "sign-up" form,
+
+![signup](https://github.com/devindu22/RedTopClothingStore/assets/114844896/537acf47-d568-4c9f-9794-9a7a6395c17a)
+
 
 ### Structure:
 #### HTML Document Setup:
@@ -58,7 +63,7 @@ Responsive Design: Media query for screens smaller than 300px to adjust button w
 
 ## "Wishlist" page
 
-1. Document Structure:
+### Document Structure:
 
 <!DOCTYPE html>: Declares the document type and version of HTML.
 
@@ -68,7 +73,7 @@ Responsive Design: Media query for screens smaller than 300px to adjust button w
   
 <body>: Contains the content and structure of the page.
   
-2. Head Section:
+### Head Section:
   
 <meta charset="UTF-8">: Specifies the character encoding for the HTML document.
 
@@ -82,19 +87,19 @@ Responsive Design: Media query for screens smaller than 300px to adjust button w
 
 <style>: Contains internal CSS styles for the page elements.
   
-3. Body Section:
+### Body Section:
    
 <body class="bg-light">: Begins the body with a light background color.
   
 <div class="container mt-5">: Container for the main content with a top margin.
   
-3.1 Header:
+### Header:
 
 <div class="header">: Header section containing the store logo and brand name.
   
 <a href="index.html" class="navbar-logo">: Link to the home page with the logo and brand name.
   
-3.2 Wishlist Title and Buttons:
+### Wishlist Title and Buttons:
 
 <div class="wishlist-title-container">: Container for the wishlist title and action buttons.
   
@@ -106,7 +111,7 @@ Responsive Design: Media query for screens smaller than 300px to adjust button w
   
 <button class="checkout-button">Checkout</button>: Button to proceed to checkout.
   
-3.3 Wishlist Items:
+### Wishlist Items:
 
 <div class="wishlist">: Container for the list of wishlist items.
   
@@ -130,11 +135,11 @@ Each wishlist item is wrapped in a <div class="wishlist-item">:
   
 <button class="plus-btn">+</button>: Button to increase quantity.
   
-4. Footer:
+### Footer:
    
 <footer class="my-5 pt-5 text-muted text-center text-small">: Footer with copyright information.
   
-5. External Scripts:
+### External Scripts:
    
 Links to jQuery, Popper.js, and Bootstrap JS for interactive functionality.
 
