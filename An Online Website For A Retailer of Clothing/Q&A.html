@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedTopClothingStore Q&A</title>
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(45deg,white, white, aquamarine, cyan, teal,  blue, navy, olive, lime, green, fuchsia, purple, red, brown, maroon, gold, yellow, orange, white );
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .qa-section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .qa-header {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .qa-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        .qa-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .qa-item h5 {
+            margin: 0;
+        }
+
+        .qa-answer {
+            max-height: 0;
+            opacity: 0;
+            margin-top: 0;
+            font-size: 1rem;
+            color: #333;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+        }
+
+        .qa-item.active .qa-answer {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        footer {
+            color: #fff;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center py-3 mb-4">
+        <div class="d-flex align-items-center">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span class="brand-name">RedTopClothingStore</span>
+        </div>
+    </header>
+
+    <div class="qa-section">
+        <div class="qa-header">Frequently Asked Questions</div>
+
+        <div class="qa-item" onclick="toggleAnswer(this)">
+            <h5>What is RedTopClothingStore?</h5>
+            <div class="qa-answer">
+                RedTopClothingStore is your go-to destination for the latest in fashion trends, offering a wide range of
+                clothing options for all occasions.
+            </div>
+        </div>
+
+        <div class="qa-item" onclick="toggleAnswer(this)">
+            <h5>What are your shipping options?</h5>
+            <div class="qa-answer">
+                We offer free shipping.
+            </div>
+        </div>
+
+        <div class="qa-item" onclick="toggleAnswer(this)">
+            <h5>How can I return an item?</h5>
+            <div class="qa-answer">
+                You can return any item within 30 days of purchase. Please visit our returns page for detailed
+                instructions and to initiate a return.
+            </div>
+        </div>
+
+        <div class="qa-item" onclick="toggleAnswer(this)">
+            <h5>Do you offer gift cards?</h5>
+            <div class="qa-answer">
+                Yes, we offer gift cards in various denominations. They can be purchased online and are redeemable both
+                online and in-store.
+            </div>
+        </div>
+
+        <div class="qa-item" onclick="toggleAnswer(this)">
+            <h5>How can I contact customer support?</h5>
+            <div class="qa-answer">
+                You can reach our customer support team via email at support@redtopclothingstore.com or by calling
+                +94-11-23-45-678. Our support hours are Monday to Friday, 9 AM to 6 PM.
+            </div>
+        </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2024 All rights reserved. Designed by Devindu Malshan.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
