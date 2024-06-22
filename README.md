@@ -8,23 +8,25 @@ https://www.youtube.com/watch?v=Kwb0b9QtQwM
 
 ![front](https://github.com/devindu22/RedTopClothingStore/assets/114844896/86b0a758-9c41-4d97-a5a5-a24535aff036)
 
-## A user-friendly "sign-up" form,
+## Sign-up Form
 
 ![signup](https://github.com/devindu22/RedTopClothingStore/assets/114844896/537acf47-d568-4c9f-9794-9a7a6395c17a)
 
-## "Wishlist" page
+## Wishlist Page
 
 ![wishlist](https://github.com/devindu22/RedTopClothingStore/assets/114844896/d6f92a73-d502-498e-91f2-9517d15a6042)
 
-## cart
+## Cart
 
 ![cart](https://github.com/devindu22/RedTopClothingStore/assets/114844896/d8b4d925-f841-4d7e-9a86-9911dbec5762)
 
-## product cards
+## Product Cards
 
 ![card](https://github.com/devindu22/RedTopClothingStore/assets/114844896/90848b3d-a849-43eb-8db3-b4697a9d5ebd)
 
-## welcome page
+## Welcome Page
+
+https://www.youtube.com/watch?v=gsOX8vcJJdY
 
 ![welcome](https://github.com/devindu22/RedTopClothingStore/assets/114844896/81bbecb0-20d2-437d-9ff7-8fbe48f1a5c9)
 
