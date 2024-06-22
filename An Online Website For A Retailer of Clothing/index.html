@@ -771,6 +771,35 @@
             transform: translateY(-8px);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
+
+        #back-to-top {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: #555;
+            /* Set a background color */
+            color: white;
+            /* Set a text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+        }
+
+        #back-to-top:hover {
+            background-color: #333;
+            /* Darker background on hover */
+        }
     </style>
 </head>
 
@@ -799,9 +828,9 @@
             </a>
             <ul class="navbar-menu">
                 <li class="menu-item"><a href="#" class="menu-link">Sale</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Catalog</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Pages</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Q&A</a></li>
+                <li class="menu-item"><a href="#Explore" class="menu-link">Explore</a></li>
+                <li class="menu-item"><a href="welcome.html" class="menu-link">Pages</a></li>
+                <li class="menu-item"><a href="Q&A.html" class="menu-link">Q&A</a></li>
             </ul>
             <div class="navbar-icons">
                 <form action="#" class="search-form">
@@ -968,7 +997,7 @@
     <br>
     <div class="container">
         <div class="row">
-            <h2 class="mb-4 text-center">Explore</h2>
+            <h2 class="mb-4 text-center" id="Explore">Explore</h2>
             <div class="col-md-4">
                 <div class="image-container">
                     <img src="cover-1.jpg" alt="Women">
@@ -1479,7 +1508,7 @@
                         <!-- Links -->
                         <ul class="list-unstyled mb-7 mb-sm-0">
                             <li>
-                                <a class="text-gray-300" href="https://github.com/devindu22">Contact Us</a>
+                                <a class="text-gray-300" href="Contact.html">Contact Us</a>
                             </li>
                             <li>
                                 <a class="text-gray-300" href="#!">FAQs</a>
@@ -1602,6 +1631,7 @@
         <br>
         <br>
         <br>
+        <button id="back-to-top" onclick="scrollToTop()">Top</button>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
@@ -1660,6 +1690,25 @@
 
         // Add event listener to the locationButton
         document.getElementById('locationButton').addEventListener('click', openMapLocation);
+    </script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 
 </body>
