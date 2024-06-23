@@ -37,7 +37,6 @@ https://www.youtube.com/watch?v=Kwb0b9QtQwM
 ## Welcome Page
 
 https://www.youtube.com/watch?v=gsOX8vcJJdY
-With Audio: https://www.youtube.com/watch?v=pcZar19cKQQ
 
 ![welcome](https://github.com/devindu22/RedTopClothingStore/assets/114844896/81bbecb0-20d2-437d-9ff7-8fbe48f1a5c9)
 
