@@ -4,7 +4,7 @@ The page is for an online clothing store named RedTopClothingStore, featuring va
 
 The page uses Bootstrap for styling and has custom CSS for visual enhancements like animations and hover effects.
 
-### An Online Website for a Retailer of Clothing Store, Full Front-End UI Walkthrough
+### An Online Website for a Retailer of Clothing Store, Full Front-End UI Walkthrugh
 
 https://www.youtube.com/watch?v=c9uZpa5nCuo
 
