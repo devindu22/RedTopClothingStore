@@ -1,6 +1,6 @@
 # RedTopClothingStore
 
-The page is for an online clothing store named RedTopClothingStore, featuring various clothing items and accessories desgned by Devindu Malshan.
+The page is for an online clothing store named RedTopClothingStore, featuring various clothing items and accessories designed by Devindu Malshan.
 
 The page uses Bootstrap for styling and has custom CSS for visual enhancements like animations and hover effects.
 
