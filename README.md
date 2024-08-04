@@ -2,7 +2,7 @@
 
 The page is for an online clothing store named RedToClothingStore, featuring various clothing items and accessories designed by Devindu Malshan.
 
-The page uses Bootstrap for syling and has cutom CSS for visual enhanceents like aniations and hover effets.
+The page uses Bootstrap for styling and has cutom CSS for visual enhanceents like aniations and hover effets.
 
 ### An Online wesite for a Retailer of Clothing Store, Full Front-End UI Wakthrough
 
