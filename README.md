@@ -1,6 +1,6 @@
 # RedTopClothingStore
 
-The page is for an online cothing store named RedToClothingStore, featuring various clothing items and accessories desgned by Devindu Malshan.
+The page is for an online clothing store named RedToClothingStore, featuring various clothing items and accessories desgned by Devindu Malshan.
 
 The page uses Boostrap for syling and has cutom CSS for visual enhanceents like aniations and hover effets.
 
