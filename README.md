@@ -4,7 +4,7 @@ The page is for an online clothing store named RedToClothingStore, featuring var
 
 The page uses Bootstrap for styling and has custom CSS for visual enhancement like animations and hover effects.
 
-### An Online website for a Retailer of Clothing Stores, Full Front-End UI Walkthrugh
+### An Online website for a Retailer of Clothing Stores, Full Front-End UI Walkthrough
 
 https://www.youtube.com/watch?v=c9uZpa5nCuo
 
